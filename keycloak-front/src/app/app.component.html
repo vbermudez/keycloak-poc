@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <span>Keycloack Demo</span>
+
+  <button mat-button [matMenuTriggerFor]="publicMenu">Público</button>
+  <mat-menu #publicMenu="matMenu">
+    <button mat-menu-item routerLink="/home">Home</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="privateMenu">Privado</button>
+  <mat-menu #privateMenu="matMenu">
+    <button mat-menu-item routerLink="/userinfo">Info. Usuario</button>
+  </mat-menu>
+
+  <button mat-button (click)="logout()">Cerrar sesión</button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

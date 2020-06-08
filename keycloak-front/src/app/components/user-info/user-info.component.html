@@ -1,0 +1,7 @@
+<mat-card *ngIf="(info | keyvalue)?.length">
+    <mat-card-title>Información de usuario (JSON)</mat-card-title>
+
+    <mat-card-content>
+        {{info | json}}
+    </mat-card-content>
+</mat-card>
